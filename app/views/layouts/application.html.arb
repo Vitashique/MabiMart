@@ -1,0 +1,88 @@
+text_node '<!DOCTYPE html>'.html_safe
+if mobile_app_request?
+  html_attr = { lang: "en", class: "mobile-app #{phone_type}" }
+else
+  html_attr = { lang: "en" }
+end
+
+html html_attr do
+  head do
+    #                                         `-.`'.-'
+    #                                      `-.        .-'.
+    #                                   `-.    -./\.-    .-'
+    #                                       -.  /_|\  .-
+    #                                   `-.   `/____\'   .-'.
+    #                                `-.    -./.-""-.\.-      '
+    #                                   `-.  /< (()) >\  .-'
+    #                                 -   .`/__`-..-'__\'   .-
+    #                               ,...`-./___|____|___\.-'.,.
+    #                                  ,-'   ,` . . ',   `-,
+    #                               ,-'   ________________  `-,
+    #                                  ,'/____|_____|_____\
+    #                                 / /__|_____|_____|___\
+    #                                / /|_____|_____|_____|_\
+    #                               ' /____|_____|_____|_____\
+    #                             .' /__|_____|_____|_____|___\
+    #                            ,' /|_____|_____|_____|_____|_\
+    # ---''--...___...--'''--.. /../____|_____|_____|_____|_____\ ..--```--...___...--``---,,
+    #                          '../__|_____|_____|_____|_____|___\
+    #     \    )              '.:/|_____|_____|_____|_____|_____|_\                  (    /
+    #     )\  / )           ,':./____|_____|_____|_____|_____|_____\                ( \  /(
+    #    / / ( (           /:../__|_____|_____|_____|_____|_____|___\                ) ) \ \
+    #   | |   \ \         /.../|_____|_____|_____|_____|_____|_____|_\              / /   | |
+    # .-.\ \    \ \      '..:/____|_____|_____|_____|_____|_____|_____\            / /    / /.-.
+    # (=  )\ `._.' |     \:./ _  _ ___  ____ ____ _    _ _ _ _ _  _ ___\           | `._.' /(  =)
+    # \ (_)       )      \./  											                    \          (       (_) /
+    # \    `----'        """"""""""""""""""""""""""""""""""""""""""""""""          `----'    /
+    #  \   ____\__         												                                __/____   /
+    #   \ (=\     \        												                         	    /     /-) /
+    #    \_) \     \     												                              /     / (_/
+    #         \     \                                                        /     /
+    #          )     )  _                                                _  (     (
+    #         (     (,-' `-..__                                    __..-' `-,)     )
+    #          \_.-''          ``-..____                  ____..-''          ``-._/
+    #           `-._                    ``--...____...--''                    _.-'
+    #               `-.._                                                _..-'
+    #                    `-..__     KNOW ALL SEE ALL CONTROL ALL   __..-'
+    #                          ``-..____                  ____..-''
+    #                                   ``--...____...--''
+    title yield :title
+    meta name: "viewport", content: "width=device-width, height=device-height,
+      initial-scale=1.0, maximum-scale=1.0"
+    text_node ( stylesheet_link_tag 'application',
+      "https://fonts.googleapis.com/css?family=Luckiest Guy:400|Rock Salt:400|Bitter:400|Changa One:400|Droid Sans:400|Droid Serif:400|Exo:400|Great Vibes:400|Inconsolata:400|Lato:400|Merriweather:400|Montserrat:400|Open Sans:400|Oswald:400|PT Sans:400|PT Serif:400|Ubuntu:400|Varela:400|Varela Round:400|Vollkorn:400&amp;text=Luckiest GyRoSalBrChngODdfExVbIMwpPTU",
+      media: 'all', type: "text/css")
+    text_node ( javascript_include_tag 'application', type: "text/javascript")
+    text_node ( favicon_link_tag 'favicon.ico' )
+    text_node csrf_meta_tags
+  end
+
+  body class: "#{controller_name} #{action_name}" do
+    text_node insert_paloma_hook
+    # div id: "notify-window", class: "theme-target" do
+    #   div class: 'sideLine color4'
+    #   textDiv flash[:notice], class: "message"
+    # end
+    # render 'elements/modals/form_holder'
+    # if controller_name.match /profile/
+    #   render 'elements/modals/photo_viewer'
+    #   render 'elements/modals/file_viewer'
+    #   render 'elements/modals/content_viewer'
+    #   render 'elements/modals/avatar_edit'
+    #   render 'elements/modals/media_gallery'
+    #   render 'elements/modals/photo_cropper'
+    #   render 'elements/modals/stats_library'
+    #   render 'elements/modals/profile_tour'
+    #   render 'elements/modals/funding_wizard_side_pages'
+    #   render 'elements/modals/university_wizard_side_pages'
+    # end
+    render "elements/nav_bar"
+    # if mobile_app_request?
+    #   render "elements/navs/mobile_nav"
+    # else
+    #   render "elements/navs/top_nav"
+    # end
+
+    text_node yield
+  end
+end

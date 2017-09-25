@@ -1,0 +1,5 @@
+section class: 'Main' do
+
+	div class: 'homepage', name: 'homepage' do
+	end
+end

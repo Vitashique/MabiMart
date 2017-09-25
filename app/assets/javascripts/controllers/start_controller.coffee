@@ -1,0 +1,2 @@
+Paloma.controller 'Start',
+  new: ->
