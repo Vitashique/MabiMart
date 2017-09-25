@@ -63,7 +63,7 @@ ActiveRecord::Schema.define(version: 20170806100506) do
 
   create_table "users", force: :cascade do |t|
     t.integer  "university_id"
-    t.boolean  "ruairi",                  default: false
+    t.boolean  "ruairi",                 default: false
     t.boolean  "alexina",                default: false
     t.boolean  "mari",                   default: false
     t.boolean  "tarlach",                default: false

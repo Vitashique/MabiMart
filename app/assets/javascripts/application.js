@@ -12,7 +12,6 @@
 //= require jquery-ui/widgets/droppable
 //= require jquery-ui/widgets/sortable
 //= require jquery-ui/widgets/dialog
-//= require_tree ./plugins
 
 //= require ./main/_base
 //= require ./views/_base

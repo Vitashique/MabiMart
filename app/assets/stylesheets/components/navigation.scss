@@ -1,5 +1,4 @@
-#topNav 
-{
+#topNav#topNav {
   list-style-type: none;
   padding-left: 0;
   position: fixed;
@@ -9,74 +8,63 @@
   z-index: 1036;
   margin-bottom: 0;
   background-color: rgba(0, 0, 0, 0.7);
-  height: 10%;
-
-  #logo 
+  height: 80px;
+  #logo
   {
     position: absolute;
     left: 3%;
     top: 0;
     background: asset_data_url('logo.svg') no-repeat center center;
     height: 100%;
-    width: 17vw;
+    width: 200px;
     cursor: pointer;
-
-    &:hover 
-      {
-        width: 18vw;
-      }
-  }
-
-  #cart
+    &:hover
     {
-      z-index: 2;
-      position: absolute;
-      top: 0;
-      right: 3%;
-      background: asset_data_url('cartBlue.svg') no-repeat center center;
-      background-size: 80%;
-      height: 100%;
-      width: 7vw;
-      cursor: pointer;
-
-      &:hover 
-      {
-        width: 8vw;
-      }
+      width: 220px;
+      left: calc(3% - 10px);
     }
-
-  #buttonArea 
+  }
+  #buttonArea
   {
+    display: flex;
     position: absolute;
-    right: 11%;
+    right: 10px;
     height: 100%;
-
-    button, a 
+    max-width: calc(100% - 17vw);
+    button, a
     {
-      display: inline-block;
-      line-height: 10vh;
-      font-size: 3vmin;
+      height: 80px;
+      line-height: 88px;
+      font-size: 20px;
       background: none;
       border: none;
       text-transform: uppercase;
       font-family: "Luckiest Guy", sans-serif;
-      width: 8vw;
+      width: 105px;
       text-align: center;
       text-decoration: none;
-
-      &:hover 
+      &:hover
       {
-        font-size: 3.5vmin;
+        font-size: 25px;
+        line-height: 86px;
       }
-
-      &.primary 
+      &.primary
       {
         color: rgb(0, 128, 173);
       }
-
-      &.secondary 
+      &.secondary
       {
         color: rgb(194, 217, 63);
+      }
+    }
+    #cart
+    {
+      background: asset_data_url('cartBlue.svg') no-repeat center center;
+      background-size: 60%;
+      width: 100px;
+      &:hover
+      {
+        background-size: 70%;
       }
     }
   }

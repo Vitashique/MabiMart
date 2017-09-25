@@ -13,7 +13,7 @@ section.Main
 }
 
 //LANDING PAGE
-.actionBlock 
+.actionBlock
 {
   height: 100%;
   float: left;
@@ -36,59 +36,59 @@ section.Main
   text-align: center;
   cursor: pointer;
 
-  &:hover 
+  &:hover
   {
-    .description p 
+    .description p
     {
       display: block;
     }
 
-    &[name=buy] .icon 
+    &[name=buy] .icon
     {
       background: asset_data_url('buy-black.svg') no-repeat center center;
       background-size: 35vmin;
       opacity: 0.6;
 
-      @media screen and (max-width: 1270px) 
+      @media screen and (max-width: 1270px)
       {
         background: asset_data_url('buy-black.svg') no-repeat center bottom 30%;
         background-size: 20vmin;
       }
     }
 
-    &[name=sell] .icon 
+    &[name=sell] .icon
     {
       background: asset_data_url('sell-black.svg') no-repeat center center;
       background-size: 35vmin;
       opacity: 0.6;
 
-      @media screen and (max-width: 1270px) 
+      @media screen and (max-width: 1270px)
       {
         background: asset_data_url('sell-black.svg') no-repeat center bottom 30%;
         background-size: 20vmin;
       }
     }
 
-    &[name=trade] .icon 
+    &[name=trade] .icon
     {
       background: asset_data_url('trade-black.svg') no-repeat center center;
       background-size: 35vmin;
       opacity: 0.6;
 
-      @media screen and (max-width: 1270px) 
+      @media screen and (max-width: 1270px)
       {
         background: asset_data_url('trade-black.svg') no-repeat center bottom 30%;
         background-size: 20vmin;
       }
     }
 
-    &[name=auction] .icon 
+    &[name=auction] .icon
     {
       background: asset_data_url('auction-black.svg') no-repeat center center;
       background-size: 35vmin;
       opacity: 0.6;
 
-      @media screen and (max-width: 1270px) 
+      @media screen and (max-width: 1270px)
       {
         background: asset_data_url('auction-black.svg') no-repeat center bottom 30%;
         background-size: 20vmin;
@@ -98,61 +98,61 @@ section.Main
 
   //RESPONSIVE AT MAX WIDTH 1270PX
 
-  @media screen and (max-width: 1270px) 
+  @media screen and (max-width: 1270px)
   {
     width: 50%;
     height: 50%;
   }
 
-  &[name=buy] .icon 
+  &[name=buy] .icon
   {
     background: asset_data_url('buy-white.svg') no-repeat center center;
     background-size: 35vmin;
 
-    @media screen and (max-width: 1270px) 
+    @media screen and (max-width: 1270px)
     {
       background: asset_data_url('buy-white.svg') no-repeat center bottom 30%;
       background-size: 20vmin;
     }
   }
 
-  &[name=sell] .icon 
+  &[name=sell] .icon
   {
     background: asset_data_url('sell-white.svg') no-repeat center center;
     background-size: 35vmin;
 
-    @media screen and (max-width: 1270px) 
+    @media screen and (max-width: 1270px)
     {
       background: asset_data_url('sell-white.svg') no-repeat center bottom 30%;
       background-size: 20vmin;
     }
   }
 
-  &[name=trade] .icon 
+  &[name=trade] .icon
   {
     background: asset_data_url('trade-white.svg') no-repeat center center;
     background-size: 35vmin;
 
-    @media screen and (max-width: 1270px) 
+    @media screen and (max-width: 1270px)
     {
       background: asset_data_url('trade-white.svg') no-repeat center bottom 30%;
       background-size: 20vmin;
     }
   }
 
-  &[name=auction] .icon 
+  &[name=auction] .icon
   {
     background: asset_data_url('auction-white.svg') no-repeat center center;
     background-size: 35vmin;
 
-    @media screen and (max-width: 1270px) 
+    @media screen and (max-width: 1270px)
     {
       background: asset_data_url('auction-white.svg') no-repeat center bottom 30%;
       background-size: 20vmin;
     }
   }
 
-  .icon 
+  .icon
   {
     z-index: 1;
     position: absolute;
@@ -161,7 +161,7 @@ section.Main
     pointer-events: none;
   }
 
-  .title 
+  .title
   {
     pointer-events: none;
     z-index: 2;
@@ -173,13 +173,13 @@ section.Main
     color: white;
     font-size: 7vmin;
 
-    @media screen and (max-width: 1270px) 
+    @media screen and (max-width: 1270px)
     {
       top: 40px;
     }
   }
 
-  .description 
+  .description
   {
     z-index: 2;
     pointer-events: none;
@@ -189,12 +189,12 @@ section.Main
     width: 100%;
     left: 0;
 
-    @media screen and (max-width: 1270px) 
+    @media screen and (max-width: 1270px)
     {
       top: 60%;
     }
 
-    p 
+    p
     {
       font-family: "Luckiest Guy", sans-serif;
       color: white;
@@ -206,7 +206,7 @@ section.Main
 }
 
 //LOGIN PAGE
-form.user_form_login 
+form.user_form_login
 {
   position: absolute;
   display: flex;
@@ -214,7 +214,7 @@ form.user_form_login
   width: 100%;
   transform: translateY(50%);
 
-  .inputGroupLogin 
+  .inputGroupLogin
   {
     display: inline-block;
     padding: 3% 3% 3% 3%;
@@ -225,7 +225,7 @@ form.user_form_login
     text-align: center;
   }
 
-  .bannerLogin 
+  .bannerLogin
   {
     padding-top: 11vh;
     width: 35vw;
@@ -234,14 +234,14 @@ form.user_form_login
     background-color: rgba(0, 128, 173, 0.8);
     text-align: center;
 
-    h1 
+    h1
     {
       font-family: "Luckiest Guy", sans-serif;
       color: rgb(255, 149, 63);
       font-size: 10vmin;
     }
 
-    p 
+    p
     {
       font-family: "Luckiest Guy", sans-serif;
       color: rgb(194, 217, 63);
@@ -249,12 +249,12 @@ form.user_form_login
     }
   }
 
-  label 
+  label
   {
     color: black;
   }
 
-  .inputRowLogin 
+  .inputRowLogin
   {
     text-align: left;
     align-self: center;
@@ -273,8 +273,8 @@ form.user_form_login
       background-color: #ffffff;
     }
   }
-  
-  input[type=submit] 
+
+  input[type=submit]
   {
     background-color: rgba(0, 128, 173, 0.6);
     font-family: "Luckiest Guy", sans-serif;
@@ -286,7 +286,7 @@ form.user_form_login
     font-size: 2vmin;
     margin-top: 5%;
 
-    &:hover 
+    &:hover
     {
       font-size: 2.5vmin;
       background-color: rgb(0, 128, 173);
@@ -295,7 +295,7 @@ form.user_form_login
 }
 
 //REGISTER PAGE
-form.user_form_register 
+form.user_form_register
 {
   position: absolute;
   display: flex;
@@ -303,7 +303,7 @@ form.user_form_register
   width: 100%;
   transform: translateY(20%);
 
-  .inputGroupRegister 
+  .inputGroupRegister
   {
     display: inline-block;
     padding: 3% 3% 3% 3%;
@@ -312,7 +312,7 @@ form.user_form_register
     text-align: center;
   }
 
-  .bannerRegister 
+  .bannerRegister
   {
     padding-top: 11vh;
     width: 35vw;
@@ -323,14 +323,14 @@ form.user_form_register
     background-color: rgba(0, 128, 173, 0.8);
     text-align: center;
 
-    h1 
+    h1
     {
       font-family: "Luckiest Guy", sans-serif;
       color: rgb(255, 149, 63);
       font-size: 6.5vmin;
     }
 
-    p 
+    p
     {
       font-family: "Luckiest Guy", sans-serif;
       color: rgb(194, 217, 63);
@@ -338,18 +338,21 @@ form.user_form_register
     }
   }
 
-  label 
+  label
   {
     color: black;
   }
 
-  .inputRowRegister 
+  .inputRowRegister
   {
     text-align: left;
     align-self: center;
     width: 25vw;
     height: 7vh;
-    input[type=text], input[type=email], input[type=number], input[type=password],
+    input[type=text],
+    input[type=email],
+    input[type=number],
+    input[type=password],
     input[type=tel]
     {
       padding: 2%;
@@ -364,11 +367,11 @@ form.user_form_register
     }
   }
 
-  .checkRow 
+  .checkRow
   {
     display: flex;
     flex-wrap: wrap;
-    label 
+    label
     {
       width: 45%;
       height: 3vh;
@@ -377,24 +380,24 @@ form.user_form_register
       flex-shrink: 0;
       margin: 1%;
       cursor: pointer;
-      &:hover 
+      &:hover
       {
         font-size: 2vmin;
       }
 
-      &.checked 
+      &.checked
       {
         outline: 2px solid #0080AD;
       }
     }
 
-    input[type=checkbox] 
+    input[type=checkbox]
     {
       display: none;
     }
   }
 
-  input[type=submit] 
+  input[type=submit]
   {
     background-color: rgba(0, 128, 173, 0.6);
     font-family: "Luckiest Guy", sans-serif;
@@ -406,7 +409,7 @@ form.user_form_register
     font-size: 2vmin;
     margin-top: 5%;
 
-    &:hover 
+    &:hover
     {
       font-size: 2.5vmin;
       background-color: rgb(0, 128, 173);
@@ -415,14 +418,14 @@ form.user_form_register
 }
 
 //HOMEPAGE
-.homepage 
+.homepage
 {
   .header
   {
 
   }
 
-  .body 
+  .body
   {
   }
 }
