@@ -30,7 +30,7 @@
   #buttonArea 
   {
     position: absolute;
-    right: 11%;
+    right: 10%;
     height: 100%;
 
     button, a 
@@ -45,11 +45,6 @@
       width: 8vw;
       text-align: center;
       text-decoration: none;
-
-      &:hover 
-      {
-        font-size: 1.6vw;
-      }
 
       &.cart
       {
@@ -76,6 +71,11 @@
       &.secondary 
       {
         color: rgb(194, 217, 63);
+      }
+
+      &:hover 
+      {
+        font-size: 1.6vw;
       }
     }
   }
