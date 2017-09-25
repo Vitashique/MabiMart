@@ -23,6 +23,16 @@
       width: 220px;
       left: calc(3% - 10px);
     }
+    @media screen and (max-width: 530px)
+    {
+      background: asset_data_url('logoSmall.svg') no-repeat center center;
+      width: 80px;
+      &:hover
+      {
+        width: 90px;
+        left: calc(3% - 5px);
+      }
+    }
   }
   #buttonArea
   {
@@ -30,7 +40,12 @@
     position: absolute;
     right: 10px;
     height: 100%;
-    max-width: calc(100% - 17vw);
+    max-width: calc(100% - 240px);
+    min-width: 270px;
+    @media screen and (max-width: 530px)
+    {
+      min-width: calc(100% - 120px);
+    }
     button, a
     {
       height: 80px;

@@ -8,8 +8,8 @@ section.Main
   overflow-x: hidden;
   overflow-y: scroll;
   padding: 0 0 0 0;
-  @include calc(height, '100% - 10%' );
-  top: 10%;
+  @include calc(height, '100% - 80px' );
+  top: 80px;
 }
 
 //LANDING PAGE
