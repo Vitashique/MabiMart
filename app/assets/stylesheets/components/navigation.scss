@@ -27,24 +27,6 @@
       }
   }
 
-  #cart
-    {
-      z-index: 2;
-      position: absolute;
-      top: 0;
-      right: 3%;
-      background: asset_data_url('cartBlue.svg') no-repeat center center;
-      background-size: 80%;
-      height: 100%;
-      width: 7vw;
-      cursor: pointer;
-
-      &:hover 
-      {
-        width: 8vw;
-      }
-    }
-
   #buttonArea 
   {
     position: absolute;
@@ -67,6 +49,23 @@
       &:hover 
       {
         font-size: 1.6vw;
+      }
+
+      &.cart
+      {
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        background: asset_data_url('cartBlue.svg') no-repeat center center;
+        background-size: 80%;
+        height: 100%;
+        width: 7vw;
+        cursor: pointer;
+
+        &:hover 
+        {
+          width: 8vw;
+        }
       }
 
       &.primary 
