@@ -1,0 +1,26 @@
+section class: 'Main' do
+  form_for(resource, as: resource_name, url: session_path(resource_name),
+  remote: true, html: {class: 'user_form_login'} ) do |f|
+    div class: 'bannerLogin', style: 'margin-left: 15vw; align-self: center;' do
+      h1 "Login?"
+      para 'Buy, sell, trade, auction!'
+    end
+    div class: 'inputGroupLogin', style: 'margin-right: 15vw; align-self: center;' do
+      div class: "inputRowLogin" do
+        f.label :login, "Email", class: "inputLabel"
+        f.text_field :login, class: "emailCheck", placeholder: 'Email', autofocus: true
+      end
+
+      div class: "inputRowLogin" do
+        f.label :password, 'Password:', class: "inputLabel"
+        div class: 'error-box', name: "password"
+        f.password_field :password, class: 'inpt-password', placeholder: 'Password'
+        # div class: 'showpass', onclick: "toggle_password($(this))" do
+        #   text_node 'SHOW'
+        # end
+      end
+
+      input type: 'submit', name: 'commit', value: 'Login'
+    end
+  end
+end

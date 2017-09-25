@@ -1,0 +1,83 @@
+#topNav 
+{
+  list-style-type: none;
+  padding-left: 0;
+  position: fixed;
+  text-align: center;
+  right: 0;
+  left: 0;
+  z-index: 1036;
+  margin-bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 10%;
+
+  #logo 
+  {
+    position: absolute;
+    left: 3%;
+    top: 0;
+    background: asset_data_url('logo.svg') no-repeat center center;
+    height: 100%;
+    width: 17vw;
+    cursor: pointer;
+
+    &:hover 
+      {
+        width: 18vw;
+      }
+  }
+
+  #cart
+    {
+      z-index: 2;
+      position: absolute;
+      top: 0;
+      right: 3%;
+      background: asset_data_url('cartBlue.svg') no-repeat center center;
+      background-size: 80%;
+      height: 100%;
+      width: 7vw;
+      cursor: pointer;
+
+      &:hover 
+      {
+        width: 8vw;
+      }
+    }
+
+  #buttonArea 
+  {
+    position: absolute;
+    right: 11%;
+    height: 100%;
+
+    button, a 
+    {
+      display: inline-block;
+      line-height: 10vh;
+      font-size: 1.5vw;
+      background: none;
+      border: none;
+      text-transform: uppercase;
+      font-family: "Luckiest Guy", sans-serif;
+      width: 8vw;
+      text-align: center;
+      text-decoration: none;
+
+      &:hover 
+      {
+        font-size: 1.6vw;
+      }
+
+      &.primary 
+      {
+        color: rgb(0, 128, 173);
+      }
+
+      &.secondary 
+      {
+        color: rgb(194, 217, 63);
+      }
+    }
+  }
+}

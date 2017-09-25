@@ -1,0 +1,45 @@
+section class: 'Main' do
+
+  div class: 'actionBlock', name: 'buy' do
+    div class: 'icon'
+    span 'buy', class: 'title'
+
+    div class: 'description' do
+      para 'Feeling a little rich?'
+      para 'Treat yourself to something nice!'
+    end
+  end
+
+  div class: 'actionBlock', name: 'sell' do
+
+    div class: 'icon'
+    span 'sell', class: 'title'
+
+    div class: 'description' do
+      para 'want to feel rich?'
+      para 'go sell your whatevers!'
+    end
+  end
+
+  div class: 'actionBlock', name: 'trade' do
+
+    div class: 'icon'
+    span 'trade', class: 'title'
+
+    div class: 'description' do
+      para 'too privileged to deal with money?'
+      para ' ask for a trade!'
+    end
+  end
+
+  div class: 'actionBlock', name: 'auction' do
+
+    div class: 'icon'
+    span 'auction', class: 'title'
+
+    div class: 'description' do
+      para 'want to watch people fight it out to the death?'
+      para 'start a bloodthirsty auction!'
+    end
+  end
+end

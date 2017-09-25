@@ -1,0 +1,39 @@
+//EVERYTHING HERE IS CONSTANT FOR ALL PAGES
+
+/*
+*= require jquery-ui/autocomplete
+*= require jquery-ui/draggable
+*= require jquery-ui/slider
+*/
+
+@import "plugins/_base";
+// @import "bootstrap";
+@import "bootstrap-select";
+@import 'mixins';
+@import "components/_base";
+@import "models/_base";
+@import "mobile/_base";
+
+body
+{
+  background: asset_data_url('Tir.png') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+
+  &.sessions.new
+  {
+    background: asset_data_url('Village.png') no-repeat center center;
+    background-size: cover;
+  	background-attachment: fixed;
+  	background-position: 50% 50%;
+  }
+
+  &.registrations.new
+  {
+    background: asset_data_url('Village.png') no-repeat center center;
+    background-size: cover;
+  	background-attachment: fixed;
+  	background-position: 50% 50%;
+  }
+}
