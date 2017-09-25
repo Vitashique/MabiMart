@@ -1,0 +1,61 @@
+section class: 'Main' do
+  form_for(resource, as: resource_name, url: registration_path(resource_name),
+  remote: true, html: {class: 'user_form_register'}) do |f|
+    div class: 'bannerRegister', style: 'margin-left: 15vw; align-self: center;' do
+      h1 'Join the MabiMart Gang!'
+      para 'Buy, sell, trade, auction!'
+    end
+
+    div class: 'inputGroupRegister', style: 'margin-right: 15vw; align-self: center;' do
+
+      div class: 'inputRowRegister' do
+        label 'Server(s):', for: 'nothing'
+        span 'Select one or more', style: 'float: right; color: #0080AD; text-shadow: 1px #000000'
+        
+        div class: 'checkRow' do
+          f.check_box :ruairi
+          f.label :ruairi, nil, onclick: '$(this).toggleClass("checked")'
+          f.check_box :alexina
+          f.label :alexina, nil, onclick: '$(this).toggleClass("checked")'
+          f.check_box :mari
+          f.label :mari, nil, onclick: '$(this).toggleClass("checked")'
+          f.check_box :tarlach
+          f.label :tarlach, nil, onclick: '$(this).toggleClass("checked")'
+        end
+      end
+
+      div class: "inputRowRegister", style: 'margin-top: 5vh;' do
+        f.label :username, 'Username:', class: "inputLabel"
+        span '(Do not use your in-game character name. Doing so may result in an in-game ban.)', style: 'float: right; color: #0080AD; margin-bottom: 1vmin;'
+        div class: 'error-box', name: "username"
+        f.text_field :username, class: 'inpt-alpha', placeholder: 'Choose a username'
+      end
+
+      div class: "inputRowRegister", style: 'margin-top: 5.5vmin;' do
+        f.label :email, 'Email:', class: "inputLabel"
+        div class: 'error-box', name: "email"
+        f.email_field :email, class: "inpt-email", placeholder: 'Enter your email'
+      end
+
+      div class: "inputRowRegister" do
+        f.label :password, 'Password:', class: "inputLabel"
+        div class: 'error-box', name: "password"
+        f.password_field :password, class: 'inpt-password', placeholder: 'Choose a password'
+        # div class: 'showpass', onclick: "toggle_password($(this))" do
+        #   text_node 'SHOW'
+        # end
+      end
+
+      div class: "inputRowRegister" do
+        f.label :confirm_password, 'Confirm Password:', class: "inputLabel"
+        div class: 'error-box', name: "confirm_password"
+        f.password_field :confirm_password, class: 'inpt-password', placeholder: 'Confirm Password'
+        # div class: 'showpass', onclick: "toggle_password($(this))" do
+        #   text_node 'SHOW'
+        # end
+      end
+
+      input type: 'submit', name: 'commit', value: 'Sign Up'
+    end
+  end
+end

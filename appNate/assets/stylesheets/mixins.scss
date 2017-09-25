@@ -1,0 +1,12 @@
+@mixin -no_scroll_bars {
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar{
+    display: none;
+  }
+}
+@mixin calc($property, $expression) {
+  #{$property}: -moz-calc(#{$expression});
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: -o-calc(#{$expression});
+  #{$property}: calc(#{$expression});
+}

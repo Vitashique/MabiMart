@@ -1,0 +1,17 @@
+div id: "topNav" do
+  text_node link_to '', root_path, id: 'logo'
+
+  div id: 'buttonArea' do
+    if user_signed_in?
+      text_node link_to 'How To', root_path, class: 'secondary'
+      text_node link_to 'Account', edit_user_registration_path(current_user), class: 'Primary'
+      text_node link_to 'Logout', destroy_user_session_path, class: 'secondary',
+        method: :delete
+      text_node link_to '', root_path, class: 'cart'
+    else
+      text_node link_to 'How To', root_path, class: 'secondary'
+      text_node link_to 'Login', new_user_session_path, class: 'primary'
+      text_node link_to 'Sign Up', new_user_registration_path, class: 'secondary'
+    end
+  end
+end

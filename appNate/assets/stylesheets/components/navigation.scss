@@ -9,89 +9,91 @@
   z-index: 1036;
   margin-bottom: 0;
   background-color: rgba(0, 0, 0, 0.7);
-  height: 10%;
+  height: 100px;
 
-  #logo 
+  #logo
   {
     position: absolute;
     left: 3%;
     top: 0;
     background: asset_data_url('logo.svg') no-repeat center center;
     height: 100%;
-    width: 17vw;
+    width: 300px;
     cursor: pointer;
 
-    &:hover 
-      {
-        width: 18vw;
-      }
+    &:hover
+    {
+      width: 350px;
+      left: calc(3% - 10px);
+    }
 
     @media screen and (max-width: 530px)
     {
       background: asset_data_url('logoSmall.svg') no-repeat center center;
-      width: 17vw;
+      width: 80px;
 
       &:hover
       {
-        width: 18vw;
+        width: 90px;
+        left: calc(3% - 5px);
       }
     }
   }
 
-  #buttonArea 
+  #buttonArea
   {
+    display: flex;
     position: absolute;
     right: 3%;
     height: 100%;
+    max-width: calc(100% - 240px);
+    min-width: 270px;
 
-    button, a 
+    @media screen and (max-width: 530px)
     {
-      display: inline-block;
-      line-height: 10vh;
-      font-size: 1.5vw;
+      min-width: calc(100% - 120px);
+    }
+
+    button, a
+    {
+      height: 100px;
+      line-height: 100px;
+      font-size: 30px;
       background: none;
       border: none;
       text-transform: uppercase;
       font-family: "Luckiest Guy", sans-serif;
-      width: 9vw;
+      width: 170px;
       text-align: center;
       text-decoration: none;
 
-      @media screen and (max-width: 530px)
+      &:hover
       {
-        font-size: 3.5vw;
-        width: 19vw;
-      }
-
-      &:hover 
-      {
-        font-size: 1.6vw;
+        font-size: 35px;
+        line-height: 100px;
       }
 
       &.cart
       {
-        z-index: 2;
-        bottom: -1vh;
-        position: relative;
         background: asset_data_url('cartBlue.svg') no-repeat center center;
-        background-size: 8vmin;
-        height: 5vh;
+        background-size: 55%;
+        width: 150px;
 
-        &:hover 
+        &:hover
         {
-          bottom: -0.5vh;
+          background-size: 60%;
         }
       }
 
-      &.primary 
+      &.primary
       {
         color: rgb(0, 128, 173);
       }
 
-      &.secondary 
+      &.secondary
       {
         color: rgb(194, 217, 63);
-      }      
+      }
     }
   }
 }

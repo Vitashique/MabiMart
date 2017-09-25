@@ -1,0 +1,58 @@
+#THIS IS TO EDIT ACCOUNT PAGE
+
+section class: 'Main' do
+  form_for(resource, as: resource_name, url: registration_path(resource_name),
+  remote: true, html: {class: 'user_form'}) do |f|
+    div class: 'banner' do
+      h1 'Join the MabiMart Gang!'
+      para 'Buy, sell, trade, auction!'
+    end
+    div class: 'inputGroup' do
+      div class: 'inputRow' do
+        label 'Server(s):', for: 'nothing'
+        span 'Select one or more', style: 'float: right; color: white;'
+        div class: 'checkRow' do
+          f.check_box :ruairi
+          f.label :ruairi, nil, onclick: '$(this).toggleClass("checked")'
+          f.check_box :alexina
+          f.label :alexina, nil, onclick: '$(this).toggleClass("checked")'
+          f.check_box :mari
+          f.label :mari, nil, onclick: '$(this).toggleClass("checked")'
+          f.check_box :tarlach
+          f.label :tarlach, nil, onclick: '$(this).toggleClass("checked")'
+        end
+      end
+      div class: "inputRow" do
+        f.label :username, 'Username:', class: "inputLabel"
+        div class: 'error-box', name: "username"
+        f.text_field :username, class: 'inpt-alpha', placeholder: 'Choose a username'
+      end
+
+      div class: "inputRow" do
+        f.label :email, 'Email:', class: "inputLabel"
+        div class: 'error-box', name: "email"
+        f.email_field :email, class: "inpt-email", placeholder: 'Enter your email'
+      end
+
+      div class: "inputRow" do
+        f.label :password, 'Password:', class: "inputLabel"
+        div class: 'error-box', name: "password"
+        f.password_field :password, class: 'inpt-password', placeholder: 'Choose a password'
+        # div class: 'showpass', onclick: "toggle_password($(this))" do
+        #   text_node 'SHOW'
+        # end
+      end
+
+      div class: "inputRow" do
+        f.label :current_password, 'Current Password:', class: "inputLabel"
+        div class: 'error-box', name: "current_password"
+        f.password_field :current_password, class: 'inpt-password', placeholder: 'Needed to save changes'
+        # div class: 'showpass', onclick: "toggle_password($(this))" do
+        #   text_node 'SHOW'
+        # end
+      end
+
+      input type: 'submit', name: 'commit', value: 'Sign Up'
+    end
+  end
+end
