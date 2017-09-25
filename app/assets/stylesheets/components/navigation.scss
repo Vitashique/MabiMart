@@ -30,7 +30,7 @@
   #buttonArea 
   {
     position: absolute;
-    right: 10%;
+    right: 3%;
     height: 100%;
 
     button, a 
@@ -49,17 +49,15 @@
       &.cart
       {
         z-index: 2;
-        position: absolute;
-        top: 0;
+        bottom: -1vh;
+        position: relative;
         background: asset_data_url('cartBlue.svg') no-repeat center center;
-        background-size: 80%;
-        height: 100%;
-        width: 7vw;
-        cursor: pointer;
+        background-size: 8vmin;
+        height: 5vh;
 
         &:hover 
         {
-          width: 8vw;
+          bottom: -0.5vh;
         }
       }
 
